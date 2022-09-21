@@ -1,10 +1,12 @@
 import React from 'react'
+import twitterIcon from "../images/twitter1.png"
 
 function Footer() {
+
   return (
     <div className='foteer'>
-        <p>contact with us </p>
-        <p>Twitter @TuwaiqAcademy</p>
+      <img src={twitterIcon} /> 
+      <p>@TuwaiqAcademy</p>
     </div>
   )
 }

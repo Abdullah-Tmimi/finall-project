@@ -1,22 +1,23 @@
-import React from 'react'
+import { NavLink, useLocation } from "react-router-dom"
+import reactLogo from "../images/react-logo.png"
 
 function Nav() {
+  const location = useLocation()
+  console.log(location.pathname)
   return (
-    <div>
-
-<div className='ul-list'> 
-<div>
-                <li>React-Intro</li>
-                </div>
+    <>
+    <header>
+      <div>
+        <img src={reactLogo} alt="" />
+        <p>React</p>
+      </div>
         <ul>
-          
-            <li>Home</li>
-            <li>Courss</li>
-            <li>About</li>
-
+          <NavLink to="/" className={() => location.pathname === "/" ? "active" : ""}>الرئيسية</NavLink>
+          <NavLink to="/cours">الدورات</NavLink>
         </ul>
-        </div>
-    </div>
+    </header>
+    <div className="main-image" />
+    </>
   )
 }
 
